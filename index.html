@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spesial Untuk Rahmatun Nazila ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #ff4d6d;
+      --secondary-color: #ffb3c1;
+      --bg-gradient: linear-gradient(135deg, #590d22 0%, #800f2f 30%, #a4133c 70%, #ff4d6d 100%);
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-border: rgba(255, 255, 255, 0.25);
+      --text-color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background Petals Animation */
+    .petal {
+      position: fixed;
+      background-color: var(--secondary-color);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: 0;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate(0, -10px) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(100px, 105vh) rotate(360deg);
+        opacity: 0.2;
+      }
+    }
+
+    /* Header Navigation */
+    header {
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .title-banner {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+      text-align: center;
+      color: #fff0f3;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav button {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(8px);
+      padding: 10px 18px;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    nav button:hover, nav button.active {
+      background: #ffffff;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 77, 109, 0.4);
+    }
+
+    /* Main Container */
+    main {
+      width: 90%;
+      max-width: 650px;
+      min-height: 380px;
+      margin: 20px 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 30px 25px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      display: none;
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    .card.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #fff0f3;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #f8f9fa;
+      font-weight: 300;
+    }
+
+    /* Memory Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .gallery-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px 10px;
+      border-radius: 12px;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .gallery-item span {
+      font-size: 1.8rem;
+    }
+
+    /* Reasons List */
+    .reason-list {
+      text-align: left;
+      margin-top: 15px;
+      list-style: none;
+    }
+
+    .reason-list li {
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Interactive Game Area */
+    .love-btn {
+      background: #ffffff;
+      color: var(--primary-color);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: transform 0.2s;
+    }
+
+    .love-btn:active {
+      transform: scale(0.95);
+    }
+
+    /* Audio Player Fixed Footer */
+    footer {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      z-index: 10;
+    }
+
+    .audio-info {
+      font-size: 0.85rem;
+      color: #ffb3c1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    audio {
+      height: 35px;
+      outline: none;
+      border-radius: 20px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 480px) {
+      .title-banner { font-size: 2rem; }
+      nav button { padding: 8px 14px; font-size: 0.8rem; }
+      .card h2 { font-size: 1.8rem; }
+      .card p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigasi -->
+  <header>
+    <div class="title-banner">For Rahmatun Nazila ✨</div>
+    <nav>
+      <button class="nav-btn active" onclick="openTab('home')">🏠 Beranda</button>
+      <button class="nav-btn" onclick="openTab('surat')">💌 Surat</button>
+      <button class="nav-btn" onclick="openTab('alasan')">💖 Alasan</button>
+      <button class="nav-btn" onclick="openTab('kenangan')">✨ Kenangan</button>
+      <button class="nav-btn" onclick="openTab('harapan')">🌟 Harapan</button>
+    </nav>
+  </header>
+
+  <!-- Konten Utama (Halaman/Tabs) -->
+  <main>
+    <!-- Halaman 1: Beranda -->
+    <div id="home" class="card active">
+      <h2>Halo, Nazila! ❤️</h2>
+      <p>
+        Halaman web kecil ini dibuat khusus untukmu. Semoga sederhana ini bisa memberikan senyuman manis di wajahmu hari ini.
+      </p>
+      <p style="margin-top: 15px;">
+        Putar musik romantis di bagian bawah web ini, lalu jelajahi setiap menu di atas ya!
+      </p>
+      <button class="love-btn" onclick="kirimCinta()">Sentuh Ini 🌸</button>
+      <p id="love-msg" style="margin-top: 15px; font-weight: 600; color: #ffb3c1;"></p>
+    </div>
+
+    <!-- Halaman 2: Surat Romantis -->
+    <div id="surat" class="card">
+      <h2>Surat Untuk Nazila 💌</h2>
+      <p>
+        "Untuk <strong>Rahmatun Nazila</strong>, hadirmu selalu membawa hangat dan warna baru. Terima kasih telah menjadi sosok yang luar biasa, sederhana namun sangat berharga."
+      </p>
+      <p style="margin-top: 12px;">
+        Setiap kali mengingat namamu, selalu ada rasa tenang yang tak bisa dijelaskan. Jangan pernah berhenti bersinar dengan caramu sendiri ya.
+      </p>
+    </div>
+
+    <!-- Halaman 3: Alasan Menyukai Nazila -->
+    <div id="alasan" class="card">
+      <h2>Hal Anggun Tentangmu 💖</h2>
+      <ul class="reason-list">
+        <li><span>✨</span> Senyumanmu yang selalu menenangkan suasana.</li>
+        <li><span>🌸</span> Ketulusan dan kebaikan hatimu kepada siapapun.</li>
+        <li><span>💫</span> Caramu berbicara dan mendengarkan.</li>
+        <li><span>🌷</span> Kehadiranmu yang selalu bikin nyaman.</li>
+      </ul>
+    </div>
+
+    <!-- Halaman 4: Galeri Momen / Ilustrasi -->
+    <div id="kenangan" class="card">
+      <h2>Momen Spesial ✨</h2>
+      <p>Setiap momen bersamamu selalu tersimpan rapi:</p>
+      <div class="gallery">
+        <div class="gallery-item">
+          <span>☕</span>
+          <p>Obrolan Hangat</p>
+        </div>
+        <div class="gallery-item">
+          <span>🌙</span>
+          <p>Malam Indah</p>
+        </div>
+        <div class="gallery-item">
+          <span>🎶</span>
+          <p>Lagu Favorit</p>
+        </div>
+        <div class="gallery-item">
+          <span>💐</span>
+          <p>Senyum Manis</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Halaman 5: Harapan -->
+    <div id="harapan" class="card">
+      <h2>Harapan & Doa 🌟</h2>
+      <p>
+        Semoga hari-harimu selalu dipenuhi dengan kebahagiaan, tawa yang lepas, dan hal-hal baik yang tak terduga.
+      </p>
+      <p style="margin-top: 15px; font-weight: 600;">
+        Tetaplah menjadi Rahmatun Nazila yang indah dan bahagia selalu! 🌹
+      </p>
+    </div>
+  </main>
+
+  <!-- Audio Player (Lagu Romantis) -->
+  <footer>
+    <div class="audio-info">
+      <span>🎵</span>
+      <span>Instrumen Romantis Untuk Nazila</span>
+    </div>
+    <!-- Menggunakan musik bebas hak cipta ber-suasana romantis -->
+    <audio controls loop id="myAudio">
+      <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112199.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung pemutar audio.
+    </audio>
+  </footer>
+
+  <!-- Logic JavaScript -->
+  <script>
+    // Fungsi Pindah Halaman / Tab
+    function openTab(tabId) {
+      const cards = document.querySelectorAll('.card');
+      const buttons = document.querySelectorAll('.nav-btn');
+
+      cards.forEach(card => card.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    // Tombol Interaktif di Beranda
+    let count = 0;
+    function kirimCinta() {
+      count++;
+      const msg = document.getElementById('love-msg');
+      if (count === 1) {
+        msg.innerText = "Satu cinta terkirim untuk Nazila! ❤️";
+      } else if (count === 5) {
+        msg.innerText = "Banyak cinta dan senyuman dikirimkan ke Nazila! 💖✨";
+      } else {
+        msg.innerText = `Kamu sudah menekan ini ${count} kali! Cinta untuk Nazila bertambah! 💕`;
+      }
+    }
+
+    // Efek Kelopak Bunga Gugur
+    function createPetals() {
+      const petalCount = 15;
+      for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        
+        // Ukuran acak
+        const size = Math.random() * 12 + 8 + 'px';
+        petal.style.width = size;
+        petal.style.height = size;
+        
+        // Posisi horizontal acak
+        petal.style.left = Math.random() * 100 + 'vw';
+        
+        // Durasi & delay animasi acak
+        petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+        petal.style.animationDelay = Math.random() * 5 + 's';
+
+        document.body.appendChild(petal);
+      }
+    }
+
+    createPetals();
+  </script>
+</body>
+</html>
